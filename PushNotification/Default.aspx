@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
     <script src="Scripts/jquery-1.6.4.min.js"></script>
-    <script src="Scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.3.0.min.js"></script>
     <script src="/signalR/hubs"></script>
       <script type="text/javascript">
 
