@@ -26,7 +26,8 @@ namespace PushNotification
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand(@"SELECT  [ProductID],[Name],[UnitPrice],[Quantity] FROM [SignalRDemo].[dbo].[Products]", connection))
+                //using (SqlCommand command = new SqlCommand(@"SELECT  [ProductID],[Name],[UnitPrice],[Quantity] FROM [SignalRDemo].[dbo].[Products]", connection))
+                using (SqlCommand command = new SqlCommand(@"select * from SignalRDemo", connection))
                 {
                     // Make sure the command object does not already have
                     // a notification object associated with it.
@@ -44,8 +45,10 @@ namespace PushNotification
                             {
                                 id = x.GetInt32(0),
                                 Name = x.GetString(1),
-                                PricDecimal = x.GetDecimal(2),
-                                QuantDecimal = x.GetDecimal(3)
+                                //PricDecimal = x.GetDecimal(2),
+                                PricDecimal = x.GetInt32(0),
+                                //QuantDecimal = x.GetDecimal(3)
+                                QuantDecimal = x.GetInt32(3)
                             }).ToList();
 
 

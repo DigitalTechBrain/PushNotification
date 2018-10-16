@@ -28,7 +28,7 @@
           function getData() {
               var $tbl = $('#tbl');
               $.ajax({
-                  url: 'index.aspx/GetData',
+                  url: 'Default.aspx/GetData',
                   contentType: "application/json; charset=utf-8",
                   dataType: "json",
                   type: "POST",
